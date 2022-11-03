@@ -15,15 +15,17 @@
 <p><img src="images/Booking Page.jpg?raw=true"/></p>
 
 ---
+<p align="center">More to come! Watch this space.</p>
 
+---
 ### Non-Coursework (The Fun Stuff)
-
-- [2021 | The Social Consult & Boston Consulting Group Slides Deck](/pdf/The_Social_Consult_n_BCG_Slides_Deck.pdf)
+- [2021 | UMW Case Study Challenge - 2nd Runner Up](/pdf/group_10_slides_2.0.pdf)
+- [2021 | The Social Consult & Boston Consulting Group Slides Deck](/pdf/social_consult_n_BCG_slides_deck.pdf)
 - [Project 2 Title](/pdf/sample_presentation.pdf)
 - [Project 3 Title](http://example.com/)
 
 ---
-<p align="center">More to come! Watch this space.</p>
+
 
 
 ---
