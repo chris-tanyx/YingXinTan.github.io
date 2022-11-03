@@ -25,7 +25,7 @@
 - [Project 3 Title](http://example.com/)
 
 <ul> 
-  <li style="list-style-type:disc"><a href="pdfs/social_consult_n_BCG_slides_deck.pdf">2021 | The Social Consult & Boston Consulting Group Slides Deck</a></li>
+  <li style="list-style-type:disc"><a href="pdf/social_consult_n_BCG_slides_deck.pdf">2021 | The Social Consult & Boston Consulting Group Slides Deck</a></li>
   <li>Tea</li>
   <li>Milk</li>
 </ul>
