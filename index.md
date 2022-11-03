@@ -12,9 +12,7 @@
 <img src="images/Booking Page.jpg?raw=true"/>
 
 ---
-<p align="center">
-More to come! Watch this space.
-</p>
+<p align="center">More to come! Watch this space.</p>
 
 ---
 
