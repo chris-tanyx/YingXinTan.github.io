@@ -10,6 +10,7 @@
 ---
 [2020 | Corona Air](https://github.com/YingXinTan/20-S1-T174-CoronaAir)
 <img src="images/Booking Page.jpg?raw=true"/>
+<img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
 [Project 1 Title](/sample_page)
