@@ -3,7 +3,7 @@
 ---
 
 ### Coursework 
-
+---
 [2020 | Corona Air](https://github.com/YingXinTan/20-S1-T174-CoronaAir)
 <img src="images/Booking Page.jpg?raw=true"/>
 
