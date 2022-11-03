@@ -15,19 +15,15 @@
 <p><img src="images/Booking Page.jpg?raw=true"/></p>
 
 ---
-<p align="center">More to come! Watch this space.</p>
-
----
 
 ### Non-Coursework (The Fun Stuff)
 
-- [Project 1 Title](http://example.com/)
+- [2021 | The Social Consult & Boston Consulting Group Slides Deck](pdf/The Social Consult n BCG Slides Deck.pdf)
 - [Project 2 Title](http://example.com/)
 - [Project 3 Title](http://example.com/)
 
 ---
-
-
+<p align="center">More to come! Watch this space.</p>
 
 
 ---
