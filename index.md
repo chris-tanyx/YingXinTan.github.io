@@ -12,7 +12,7 @@
 
 ---
 [2020 | Corona Air](https://github.com/YingXinTan/20-S1-T174-CoronaAir)
-[2020 | Corona Air](/pdf/group_10_slides_2.0.pdf)
+[Project 3 Title](/pdf/group_10_slides_2.0.pdf)
 <p><img src="images/Booking Page.jpg?raw=true"/></p>
 
 ---
