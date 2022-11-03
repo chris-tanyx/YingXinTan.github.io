@@ -4,6 +4,10 @@
 
 ### Coursework 
 ---
+[2022 | How Deep is too Deep?](https://github.com/YingXinTan/TRC5901_Project)
+<img src="images/dummy_thumbnail.jpg?raw=true"/>
+
+---
 [2020 | Corona Air](https://github.com/YingXinTan/20-S1-T174-CoronaAir)
 <img src="images/Booking Page.jpg?raw=true"/>
 
