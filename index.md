@@ -18,7 +18,7 @@
 
 ### Non-Coursework (The Fun Stuff)
 
-- [2021 | The Social Consult & Boston Consulting Group Slides Deck](pdf/The Social Consult n BCG Slides Deck.pdf)
+- [2021 | The Social Consult & Boston Consulting Group Slides Deck](/pdf/The Social Consult n BCG Slides Deck.pdf)
 - [Project 2 Title](http://example.com/)
 - [Project 3 Title](http://example.com/)
 
