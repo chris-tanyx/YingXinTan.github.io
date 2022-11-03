@@ -24,8 +24,8 @@
   <li style="list-style-type:disc"><a href="pdf/social_consult_n_BCG_slides_deck.pdf">2021 | The Social Consult & Boston Consulting Group Slides Deck</a></li>
   <li style="list-style-type:disc"><a href="pdf/.pdf">2021 | UMW Case Study Challenge - 2nd Runner Up</a></li>
 </ul>
----
 
+---
 
 
 ---
