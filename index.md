@@ -4,7 +4,7 @@
 
 ### Coursework 
 ---
-[2022 | How Deep is too Deep?](https://github.com/YingXinTan/TRC5901_Project)
+[2022 | How Deep is too Deep?](/TRC5901_Project_page)
 <img src="images/how_deep_is_too_deep_bestmodel.png?raw=true"/>
 
 ---
