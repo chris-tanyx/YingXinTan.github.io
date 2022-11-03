@@ -19,14 +19,13 @@
 
 ---
 ### Non-Coursework (The Fun Stuff)
-- [2021 | UMW Case Study Challenge - 2nd Runner Up](pdf/group_10_slides_2.0.pdf)
+
 - [2021 > The Social Consult & Boston Consulting Group Slides Deck](/pdf/social_consult_n_BCG_slides_deck.pdf)
 - [2021 > UMW Case Study Challenge - 2nd Runner Up](/pdf/group_10_slides_2.0.pdf)
 - [Project 3 Title](http://example.com/)
 
-<a href="pdfs/ProjMarr_slides.pdf" class="image fit"><img src="images/marr_pic.jpg" alt=""></a>
 <ul> 
-  <li style="list-style-type:disc"><a href="pdfs/ProjMarr_slides.pdf">2021 | The Social Consult & Boston Consulting Group Slides Deck</a></li>
+  <li style="list-style-type:disc"><a href="pdfs/social_consult_n_BCG_slides_deck.pdf">2021 | The Social Consult & Boston Consulting Group Slides Deck</a></li>
   <li>Tea</li>
   <li>Milk</li>
 </ul>
