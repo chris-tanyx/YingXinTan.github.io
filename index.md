@@ -4,7 +4,7 @@
 
 ### Coursework 
 [2022 | Extended Kalman Filter, Computer Vision & Path Planning](https://github.com/YingXinTan/ECE4078-G4-FINALISED)
-<center><img src="images/ECE4078_Test.gif?raw=true" width="250"/></center>
+<p align="center"><img src="images/ECE4078_Test.gif?raw=true" width="250"/></p>
 <br>
 
 ---
