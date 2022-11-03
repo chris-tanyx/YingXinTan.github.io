@@ -11,7 +11,7 @@
 <p><img src="images/all_accuracies.png?raw=true"/></p>
 
 ---
-[2020 | Corona Air](https://github.com/YingXinTan/20-S1-T174-CoronaAir)
+[2020 | Corona Air](https://github.com/YingXinTan/20-S1-T174-CoronaAir)<br>
 [Project 3 Title](/pdf/group_10_slides_2.0.pdf)
 <p><img src="images/Booking Page.jpg?raw=true"/></p>
 
