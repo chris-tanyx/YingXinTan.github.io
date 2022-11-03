@@ -4,8 +4,12 @@
 
 ### Coursework 
 ---
+[2022 | Extended Kalman Filter, Computer Vision & Path Planning](https://github.com/YingXinTan/ECE4078-G4-FINALISED)
+<img src="images/ECE4078_Test.gif?raw=true"/>
+
+---
 [2022 | How Deep is too Deep?](/TRC5901_Project_page)
-<img src="images/how_deep_is_too_deep_bestmodel.png?raw=true"/>
+<img src="images/all_accuracies.png?raw=true"/>
 
 ---
 [2020 | Corona Air](https://github.com/YingXinTan/20-S1-T174-CoronaAir)
