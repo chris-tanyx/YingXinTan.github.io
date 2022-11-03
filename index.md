@@ -8,11 +8,11 @@
 
 ---
 [2022 | How Deep is too Deep?](/TRC5901_Project_page)
-<img src="images/all_accuracies.png?raw=true"/>
+<p><img src="images/all_accuracies.png?raw=true"/></p>
 
 ---
 [2020 | Corona Air](https://github.com/YingXinTan/20-S1-T174-CoronaAir)
-<img src="images/Booking Page.jpg?raw=true"/>
+<p><img src="images/Booking Page.jpg?raw=true"/></p>
 
 ---
 <p align="center">More to come! Watch this space.</p>
