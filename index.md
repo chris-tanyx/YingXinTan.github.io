@@ -5,7 +5,7 @@
 ### Coursework 
 ---
 [2022 | How Deep is too Deep?](https://github.com/YingXinTan/TRC5901_Project)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/how_deep_is_too_deep_bestmodel.png?raw=true"/>
 
 ---
 [2020 | Corona Air](https://github.com/YingXinTan/20-S1-T174-CoronaAir)
