@@ -2,7 +2,11 @@
 
 ---
 
-### Coursework 
+### Coursework
+[2023 | Final Year Project: Learning from Demonstration (LfD) for a Robotic Arm]
+<p align="center"><img src="images/ECE4078_Test.gif?raw=true" width="250"/></p>
+
+---
 [2022 | Extended Kalman Filter, Computer Vision & Path Planning](https://github.com/YingXinTan/ECE4078-G4-FINALISED)
 <p align="center"><img src="images/ECE4078_Test.gif?raw=true" width="250"/></p>
 
