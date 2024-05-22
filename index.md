@@ -11,7 +11,7 @@
 <p align="center"><img src="images/ECE4078_Test.gif?raw=true" width="250"/></p>
 
 ---
-[2022 | How Deep is too Deep?](https://github.com/YingXinTan/TRC5901_Project)
+[2022 | How Deep is too Deep?](/TRC5901_Project_page.md)
 <p><img src="images/all_accuracies.png?raw=true"/></p>
 
 ---
