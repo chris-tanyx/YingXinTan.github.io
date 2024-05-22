@@ -6,7 +6,6 @@
 
 - Apply deep learning theory to optimise a deep learning model for object classification.
 - Gain experience in using open access tools, such as TensorFlow and PyTorch, in solving computer vision problems.
-- Familiarise commonly used labelled image classification data such as CIFAR-10. 
 - Study the effects of *presence of data pre-processing, optimiser selection, and fully-connected layer design, convolutional and pooling layers built* on classification prediction. 
 
 ### Methods
