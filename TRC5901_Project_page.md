@@ -23,7 +23,7 @@ It is good practice to do this because the model would be trained to generalize 
 #### 3. Define baseline model
 A basic CNN model was first built to serve as a baseline. At each stage, slight modifications are applied to this baseline model to study how it affects the prediction accuracy. 
 
-<img src="images/TRC5901_Project_img2.png?raw=true"/>
+<img src="images/TRC5901_Project_img2.png?raw=true" height=300/>
 
 Design of baseline model:
 - 1 Convolutional (Conv.) Layer + 1 Dense Layer
@@ -33,9 +33,31 @@ Design of baseline model:
 - Momentum: 0 (Default)
 
 #### 4. Study effects on changed variables 
-    <Proofread pls>
-    After each modification to the baseline model, the best modified model was selected to be used in the next level of testing.
+<23.05.2024> <br>
+From this baseline model, new models were derived, each with slightly varied layers or
+hyperparameters. Furthermore, different data pre-processing methods were also tested for their
+effects on the final model performance. They are then trained for a maximum of 20 epochs. For
+each epoch, the validation loss was calculated and compared with the lowest value from previous
+epochs. If there's an improvement in validation loss, the model trained up until the current epoch
+number is saved as the new best model. This addresses the issue of overfitting which sometimes
+occur when the CNN is modelled too well to the training data. It is identifiable by a continual
+dropping training loss while the validation loss remains stagnant or increasing, an example of
+which is depicted in Figure 4. In case of overfitting, the model with the best performance before
+20 epochs was used to evaluate the testing data.
+
 #### *4.1 Data pre-processing*
+A common practice to training predictive models are to perform data-preprocessing on raw data. In this stage, 2 versions of the baseline model is used; one has the images undergo pre-processing and another doesn't. 
+
+Pixel normalization was implemented to reduce training time and help the model generalised better. Each pixel in a colour image was normalized from a range of 0-255 to 0-1 by dividing each pixel’s value by 255.0. 
+
+| Model  | Pre-processing Method |
+| ------------- | ------------- |
+| 1  | None  |
+| 2  | Pixel Normalisation  |
+
+By comparing the values in Table I, it proves that ample data pre-
+processing greatly improves model predictions.
+
 #### *4.2 Optimiser selection*
 #### *4.3 Fully Connected layers*
 #### *4.4 Convolutional and Pooling layers*
