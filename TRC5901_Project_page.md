@@ -10,7 +10,7 @@
 
 ### Methods
 #### 1. Load CIFAR-10 dataset from the KERAS library
-It has 60 000 labeled images of 10 classes, already split into 50 000 for training and 10 000 for testing. Each coloured image has a resolution of 32x32 with 3 channels for red, green and blue colours. 
+The CIFAR-10 dataset has 60 000 labeled images of 10 classes, already split into 50 000 for training and 10 000 for testing. Each coloured image has a resolution of 32x32 with 3 channels for red, green and blue colours. 
 
 #### 2. Extract validation datset from testing dataset
 The 10 000 images from the original testing dataset was further randomly split into 7000 images for validation and the
@@ -33,20 +33,16 @@ Design of baseline model:
 - Momentum: 0 (Default)
 
 #### 4. Study effects on changed variables 
-<23.05.2024> <br>
-From this baseline model, new models were derived, each with slightly varied layers or
-hyperparameters. Furthermore, different data pre-processing methods were also tested for their
-effects on the final model performance. They are then trained for a maximum of 20 epochs. For
-each epoch, the validation loss was calculated and compared with the lowest value from previous
-epochs. If there's an improvement in validation loss, the model trained up until the current epoch
-number is saved as the new best model. This addresses the issue of overfitting which sometimes
-occur when the CNN is modelled too well to the training data. It is identifiable by a continual
-dropping training loss while the validation loss remains stagnant or increasing, an example of
-which is depicted in Figure 4. In case of overfitting, the model with the best performance before
-20 epochs was used to evaluate the testing data.
+New models, each a slight variant of the baseline model, was derived by either changing the hyperparameters or data-preprocessing methods. Each model variant was trained for a maximum of 20 epochs. The model's validation loss was caluclated by the end of each epoch and then compared to the lowest value from previous epochs. If there's an improvement in validation loss, the model trained up until the current epoch is saved as the new best model. 
+
+This addresses the issue of overfitting which sometimes occur when the CNN is modelled too well to the training data. It is identifiable by a continuously dropping training loss while the validation loss remains stagnant or even increases.An example of of this is depicted in Figure 4. In case of overfitting, the model with the best performance before 20 epochs was used to evaluate the testing data.
+
+<img src="images/TRC5901_Project_img3.png?raw=true"/>
+
+To summarise, the changed variables studied in this project are data pre-processing methods, optimiser type, structure of fully-connected (FC) layers and also the structure of convulutional + pooling layers.  
 
 #### *4.1 Data pre-processing*
-A common practice to training predictive models are to perform data-preprocessing on raw data. In this stage, 2 versions of the baseline model is used; one has the images undergo pre-processing and another doesn't. 
+A common practice to training predictive models are to perform data pre-processing on raw data. In this stage, 2 versions of the baseline model is used; one has the images undergo pre-processing and another doesn't. 
 
 Pixel normalization was implemented to reduce training time and help the model generalised better. Each pixel in a colour image was normalized from a range of 0-255 to 0-1 by dividing each pixel’s value by 255.0. 
 
@@ -55,8 +51,7 @@ Pixel normalization was implemented to reduce training time and help the model g
 | 1  | None  |
 | 2  | Pixel Normalisation  |
 
-By comparing the values in Table I, it proves that ample data pre-
-processing greatly improves model predictions.
+By comparing the values in Table I, it proves that ample data pre-processing greatly improves model predictions.
 
 #### *4.2 Optimiser selection*
 #### *4.3 Fully Connected layers*
