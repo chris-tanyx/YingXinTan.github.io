@@ -54,11 +54,31 @@ Pixel normalization was implemented to reduce training time and to help the mode
 By comparing the values in the table above, it proves that ample data pre-processing greatly improves model predictions.
 
 #### *4.2 Optimiser selection*
-The learning rate determines how muhc the weight parameter updates itself during training using a gradient descent algorithm. In general, a learning rate that is too small makes model traiing computatinally expensive but has a higher cance of arrcinign at a global minima of a loss function. Conversely, if the learing rate is too large, it is at risk of weghts diverginf from the global minima. 
+The learning rate determines how much the weight parameter updates itself during training using a gradient descent algorithm. In general, a learning rate that is too small makes model training computationally expensive but has a higher chance of arriving at a global minima of a loss function. Conversely, if the learing rate is too large, it is at risk of weights diverging from the global minima. 
 
-<img src="images/TRC5901_Project_img3.png?raw=true"/>
+<img src="images/TRC5901_Project_img4.png?raw=true"/>
+
+By default, the learning rate and momentum of a SGD optimizer from the Keras library is 0.01 and 0 respectively. As the project task focuses on improving the classification accuracy and the maximum number of eopchs is a relatively small number of 20, the learning rate was reduced to 0.001 to converge at a point closer to the final minimum in the sparse cross-entropy loss function. In addition, the momentim is set to 0.9 to accelerate gradient vectors while optimizing the weight vector. 
+
+| Model  | Hyperparameters | Train. Loss | Train. Acc. | Val. Loss | Val. Acc. | Test Loss | Test Acc. | No. of Parameters | Epoch Nr. |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| 1  | LR = 0.01; α = 0  | 0.69 | 76.5% | 1.01 | 65.6% | 1.05 | 64.3% | 923,914 | 16 |
+| 2  | LR = 0.001; α = 0.90  | 0.55 | 81.2% | 1.02 | 66.1% | 1.13 | 64.6% | 923,914 | 17 |
+
+whereby LR : Learning Rate and α : Momentum
 
 #### *4.3 Fully Connected layers*
+The ability of a CNN to classify an image into one of the 10 classes in the CIFAR-10 dataset is attributed to fully connected or dense layeers. In general, the larger the depth of the hidden dense layers, the higher the model performance. However, if there are too many layers, it could compoud training time. For the purposes of this study, prediction performnace is championed over computational cost. 
+
+Here's the tabulation of the perfomance metrics of models with incresing number of layers with some tweaking of neuron numbers in a layer in the last model. 
+
+| Model  | Dense Layers | Train. Loss | Train. Acc. | Val. Loss | Val. Acc. | Test Loss | Test Acc. | No. of Parameters | Epoch Nr. |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| 1  | FC1 (128)  | 0.55 | 81.2% | 1.02 | 66.1% | 1.13 | 64.6% | 923,914 | 17 |
+| 2  | FC1 (128) + FC2 (128)  | 0.66 | 81.3% | 1.11 | 65.7% | 1.13 | 65.0% | 940,426 | 12 |
+| 3  | FC1 (128) + FC2 (128) + FC3 (128)  | 0.32 | 88.9% | 1.37 | 64.5% | 1.38 | 63.6% | 956,938 | 12 |
+| 4  | FC1 (128) + FC2 (120) + FC3 (84)  | 0.80 | 72.0% | 1.04 | 64.4% | 1.06 | 63.6% | 949,118 | 10 |
+
 #### *4.4 Convolutional and Pooling layers*
 
 
