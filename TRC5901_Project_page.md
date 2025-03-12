@@ -46,14 +46,18 @@ A common practice to training predictive models are to perform data pre-processi
 
 Pixel normalization was implemented to reduce training time and to help the model generalised better. Each pixel in a colour image was normalized from a range of 0-255 to 0-1. 
 
-| Model  | Pre-processing Method | Train. Loss | Train. Acc. |
-| ------------- | ------------- | ------------- | ------------- |
-| 1  | None  | 2.302 | 9.8% |
-| 2  | Pixel Normalisation  | 0.553 | 81.2% |
+| Model  | Pre-processing Method | Train. Loss | Train. Acc. | Val. Loss | Val. Acc. | Test Loss | Test Acc. | No. of Parameters | Epoch Nr. |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| 1  | None  | 2.30 | 9.8% | 2.31 | 11.2% | 2.30 | 9.0% | 923,914 | 12 |
+| 2  | Pixel Normalisation  | 0.55 | 81.2% | 1.02 | 66.1% | 1.13 | 64.6% | 923,914 | 17 |
 
-By comparing the values in Table I, it proves that ample data pre-processing greatly improves model predictions.
+By comparing the values in the table above, it proves that ample data pre-processing greatly improves model predictions.
 
 #### *4.2 Optimiser selection*
+The learning rate determines how muhc the weight parameter updates itself during training using a gradient descent algorithm. In general, a learning rate that is too small makes model traiing computatinally expensive but has a higher cance of arrcinign at a global minima of a loss function. Conversely, if the learing rate is too large, it is at risk of weghts diverginf from the global minima. 
+
+<img src="images/TRC5901_Project_img3.png?raw=true"/>
+
 #### *4.3 Fully Connected layers*
 #### *4.4 Convolutional and Pooling layers*
 
