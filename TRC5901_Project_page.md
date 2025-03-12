@@ -44,12 +44,12 @@ To summarise, the changed variables studied in this project are data pre-process
 #### *4.1 Data pre-processing*
 A common practice to training predictive models are to perform data pre-processing on raw data. In this stage, 2 versions of the baseline model is used; one has the images undergo pre-processing and another doesn't. 
 
-Pixel normalization was implemented to reduce training time and help the model generalised better. Each pixel in a colour image was normalized from a range of 0-255 to 0-1 by dividing each pixel’s value by 255.0. 
+Pixel normalization was implemented to reduce training time and to help the model generalised better. Each pixel in a colour image was normalized from a range of 0-255 to 0-1. 
 
-| Model  | Pre-processing Method |
-| ------------- | ------------- |
-| 1  | None  |
-| 2  | Pixel Normalisation  |
+| Model  | Pre-processing Method | Train. Loss | Train. Acc. |
+| ------------- | ------------- | ------------- | ------------- |
+| 1  | None  | 2.302 | 9.8% |
+| 2  | Pixel Normalisation  | 0.553 | 81.2% |
 
 By comparing the values in Table I, it proves that ample data pre-processing greatly improves model predictions.
 
