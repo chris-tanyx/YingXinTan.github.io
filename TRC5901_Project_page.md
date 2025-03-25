@@ -83,6 +83,7 @@ By comparing the validation loss of the first 3 rows, the values turns out do no
  
 
 #### *4.4 Convolutional and Pooling layers*
+Convolutional layers are resposible for feature extraction in a CNN. In general terms, a convolution involves sliding a filter (aka a kernel) across an input image which produces a feature map -- a numerical representation of a detected feature. A filter can be designed to detect a soecific feature on any part of an image. Similar to th dense layers, the larefer the depth o convolutional layers, the more likely the model's predictions are accurate. However, too many layers could also leas to overfitting (and requrire more traiing data)It precents pver=fitting and downssamples inpits by redusing image side while retaining important information. 
 
 
 
