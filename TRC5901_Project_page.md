@@ -83,11 +83,9 @@ By comparing the validation loss of the first 3 rows, the values turns out do no
  
 
 #### *4.4 Convolutional and Pooling layers*
-Convolutional layers are resposible for feature extraction in a CNN. In general terms, a convolution involves sliding a filter (aka a kernel) across an input image which produces a feature map -- a numerical representation of a detected feature. A filter can be designed to detect a soecific feature on any part of an image. Similar to th dense layers, the larefer the depth o convolutional layers, the more likely the model's predictions are accurate. However, too many layers could also leas to overfitting (and requrire more traiing data)It precents pver=fitting and downssamples inpits by redusing image side while retaining important information. 
+Convolutional layers are responsible for feature extraction in a CNN. In general terms, a convolution involves sliding a filter (aka a kernel) across an input image which produces a feature map -- a numerical representation of a detected feature. A filter can be designed to detect a specific feature on any part of an image. Similar to the dense layers, the larger the depth of convolutional layers, the more likely the model's predictions are accurate. However, too many layers could also lead to overfitting (and require more training data). It prevents overfitting and down-samples inputs by reducing image side while retaining important information. 
 
-
-
-
+Based on the findings in subsection 4.3, all designs presented in Table IV have the same single dense layer at the end for classification. Further details on the sizes of each layer in the models are shown in Figure 6. In designs (a) to (c), the input images were not padded as they were not necessary, but design (d) was an exception. The images in design (d) were padded such that the output shape is the same as the input shape to maintain the correct input size at each additional layer. An additional advantage of this omission of padding is number of trainable parameters are also reduced. 
 
 
 ### 5. Best model
