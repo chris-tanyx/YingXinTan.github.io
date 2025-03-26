@@ -72,12 +72,19 @@ The ability of a CNN to classify an image into one of the 10 classes in the CIFA
 
 Here's the tabulation of the perfomance metrics of models with incresing number of layers with some tweaking of neuron numbers in a layer in the last model. 
 
-| Model  | Dense Layers | Train. Loss | Train. Acc. | Val. Loss | Val. Acc. | Test Loss | Test Acc. | No. of Parameters | Epoch Nr. |
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| 1  | FC1 (128)  | 0.55 | 81.2% | 1.02 | 66.1% | 1.13 | 64.6% | 923,914 | 17 |
-| 2  | FC1 (128) + FC2 (128)  | 0.66 | 81.3% | 1.11 | 65.7% | 1.13 | 65.0% | 940,426 | 12 |
-| 3  | FC1 (128) + FC2 (128) + FC3 (128)  | 0.32 | 88.9% | 1.37 | 64.5% | 1.38 | 63.6% | 956,938 | 12 |
-| 4  | FC1 (128) + FC2 (120) + FC3 (84)  | 0.80 | 72.0% | 1.04 | 64.4% | 1.06 | 63.6% | 949,118 | 10 |
+| Model  | Dense Layers | Train. Loss | Train. Acc. |
+| ------------- | ------------- | ------------- | ------------- | 
+| 1  | FC1 (128)  | 0.55 | 81.2% |
+| 2  | FC1 (128) + FC2 (128)  | 0.66 | 81.3% | 
+| 3  | FC1 (128) + FC2 (128) + FC3 (128)  | 0.32 | 88.9% |
+| 4  | FC1 (128) + FC2 (120) + FC3 (84)  | 0.80 | 72.0% | 
+
+| Model | Val. Loss | Val. Acc. | Test Loss | Test Acc. | No. of Parameters | Epoch Nr. |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| 1 | 1.02 | 66.1% | 1.13 | 64.6% | 923,914 | 17 |
+| 2 | 1.11 | 65.7% | 1.13 | 65.0% | 940,426 | 12 |
+| 3 | 1.37 | 64.5% | 1.38 | 63.6% | 956,938 | 12 |
+| 4 | 1.04 | 64.4% | 1.06 | 63.6% | 949,118 | 10 |
 
 By comparing the validation loss of the first 3 rows, the values turns out do not align with the aforementioned generalised understanding of CNN depth in relation with model performance. This unexpected behaviour may be the result of limiting the maximum bumber of epochs to a relatiely conseticave 20 epochs as the parameters of this study. As the numer of dense layers increases, the model likely requres more time to optimise its parameters, hence 20 epochs may be insuffucent which results in an unoptimised model that makes poor predictions. 
  
