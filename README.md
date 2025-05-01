@@ -6,5 +6,5 @@ Hi! If you're reading this, welcome. :) I've always felt inadequate in my coding
 
 Cheerios, treat yourself to something nice, and never let others deter you from learning something you genuinely find intellectually stimulating.
 
-Treat yourself with kindness, 
-Chris T. 
+Treat yourself with kindness, </br> 
+Chris T. :)
