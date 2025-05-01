@@ -94,14 +94,34 @@ Convolutional layers are responsible for feature extraction in a CNN. In general
 
 Based on the findings in subsection 4.3, all designs presented in Table IV have the same single dense layer at the end for classification. Further details on the sizes of each layer in the models are shown in Figure 6. In designs (a) to (c), the input images were not padded as they were not necessary, but design (d) was an exception. The images in design (d) were padded such that the output shape is the same as the input shape to maintain the correct input size at each additional layer. An additional advantage of this omission of padding is number of trainable parameters are also reduced. 
 
+<b>Summary of tested model designs</b>
+- Design (a): 1 Conv. Layer & 1 Max. pool
+- Design (b): Design (a) + 1 Conv. Layer & 1 Max. pool
+- Design (c): Design (b) + 1 Conv. Layer & 1 Max. pool
+- Design (d): Design (c) + 1 Conv. Layer & 1 Max. pool, with all convolutional layers having their input padded
+
+| Designs  | Train. Loss | Train. Acc. | Val. Loss | Val. Acc. | Test Loss | Test Acc. | No. of Parameters | Epoch Nr. |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| (a)  | 0.55 | 81.2% | 1.02 | 66.1% | 1.13 | 64.6% | 923,914 | 15 |
+| (b)  | 0.73 | 74.9% | 0.98 | 67.3% | 0.99 | 64.6% | 159,018 | 19 |
+| (c)  | 0.87 | 69.7% | 0.99 | 65.8% | 1.00 | 66.0% |  37,194 | 20 |
+| (d)  | 0.63 | 77.9% | 0.89 | 70.2% | 0.91 | 69.7% | 169,450 | 17 |
+
+For each design, the training and validation loss, along with the respective accuracies readings were plotted to identify any occurences of overfitting. The optimum number of epochs to run the training was informed by the epoch right before signs of overfitting is detected from the validation loss. From the plot below, the model designs, from top left to bottom right, are in the sequence of (a), (b), (c) and (d). 
+
+<img src="images/TRC5901_Project_img5.png?raw=true"/>
+<img src="images/TRC5901_Project_img6.png?raw=true"/>
+
 
 ### 5. Best model
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+<img src="images/TRC5901_Project_img7.png?raw=true"/>
 
-```javascript
-if (isAwesome){
-  return true
-}
-```
+If deciding solely on validation accuracy and loss, the clear winner is design (d). It should be paired with pixel normalisation on the input images, a learning rate of 0.001 with a momentum of 0.9 to achieve highest recorded performance of validation loss = 0.89 and accuracy of 0.70%. This aligns with the general trend of a deeper model producing better predictions.
 
+However, building as deep as possible to boost the performance of a CNN is unrealistic. Training time and number of computable parameters should be considered too to strike a balance between resource management and prediction accuracy. 
+
+Speaking of accuracy, J. Brownlee et. al, in their paper "How to Develop a CNN from Scratch for CIFAR-10 Photo Classification" showed that it was possible to reach a prediction accuracy of 88.62% if a plethora of computer vision techniques are applied. In the deep learning world, it is general knowledge that longer training times and fine-tuning hyperparameters would eventually build a better model, but there are other techniques as well. For starters, there's data augmentation to stretch the number of training images. Furthermore, there is also batch normalisation and drop out layers which have been proven to improve generalisation. When designing the optimiser, a loss function can include a penalty term as well, via L1 or L2 regularisation; and if SGD is chosen, a learning rate decay could be helpful to reach the point of stability in a loss function by incrementally shrinking its value with each training epoch. All of these avenues can be explored to aim for better prediction results.      
+
+### 6. Conclusion
+CNNs are best suited for image classification in most cases. However, that assumption can will only be valid when a CNN model is tweaked to fit the objective of prediction and the input dataset. Not all commonly-known data preprocessing methods are used to develop the most accurate model in this study (as its intention was to focus on the relationship between depth of model and prediction performance) but should this model be further refine, that should be the direction to explore. 
