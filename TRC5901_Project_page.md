@@ -131,5 +131,9 @@ CNNs are best suited for image classification in most cases. However, that assum
 </br>
 ---
 I also had to make a video presentation on my findings. The target audience is a general public with no background in engineering. So I put on my "science communicator hat" and received glowing comments from my lecturer. I got one of the best scored on this presentation, so enjoy the movie!
-<img src="images/TRC5901_Video.mp4?"/>
+
+<video>
+ <source src="https://github.com/chris-tanyx/YingXinTan.github.io/raw/refs/heads/master/images/TRC5901_Video.mp4">
+</video>
+
 
