@@ -129,7 +129,7 @@ Speaking of accuracy, J. Brownlee et. al, in their paper "How to Develop a CNN f
 CNNs are best suited for image classification in most cases. However, that assumption can will only be valid when a CNN model is tweaked to fit the objective of prediction and the input dataset. Not all commonly-known data preprocessing methods are used to develop the most accurate model in this study (as its intention was to focus on the relationship between depth of model and prediction performance) but should this model be further refine, that should be the direction to explore. 
 
 ---
-I also had to make a video presentation on my findings. The target audience is a general public with no background in engineering. So I put on my "science communicator hat" and received glowing comments from my lecturer. I got one of the best scored on this presentation, so enjoy the movie!
+I also made a video presentation on my findings. The target audience is a general public with no background in engineering. So I put on my "science communicator hat" and received glowing comments from my lecturer, so enjoy the movie!
 
 <video width="500" height="375" controls loop="" muted="" autoplay="">
  <source src="https://github.com/chris-tanyx/YingXinTan.github.io/raw/refs/heads/master/images/TRC5901_Video.mp4">
