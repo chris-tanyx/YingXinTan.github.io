@@ -1,5 +1,7 @@
 ## TRC 5901: How deep is too deep?
 
+<img src="images/TRC5901_Project_img0.png?raw=true"/>
+
 **Project description:** This is a project to wrap up a Level 5 unit in the Monash School of Engineering. The purpose of this project was to provide us students a simple research project studying the effects of varying convolution layers on the prediction accuracies of a model. To test our skills on verbal and written communication, the project required 2 final submissions: a final written report intended for a technical audience and a 3 minute video pitch intended for a general audience. 
 
 ### Objectives
@@ -125,3 +127,7 @@ Speaking of accuracy, J. Brownlee et. al, in their paper "How to Develop a CNN f
 
 ### 6. Conclusion
 CNNs are best suited for image classification in most cases. However, that assumption can will only be valid when a CNN model is tweaked to fit the objective of prediction and the input dataset. Not all commonly-known data preprocessing methods are used to develop the most accurate model in this study (as its intention was to focus on the relationship between depth of model and prediction performance) but should this model be further refine, that should be the direction to explore. 
+
+</br>
+---
+I also had to make a video presentation on my findings. The target audience is a general public with no background in engineering. So I put on my "science communicator hat" and received glowing comments from my lecturer. I got one of the best scored on this presentation, so enjoy the movie!
