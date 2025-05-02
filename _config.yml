@@ -7,9 +7,9 @@ description: > # your text below (remove <br> elements if you don't need line br
   VAT Design Engineer <br>
 
   <br>
-  <a href="https://www.linkedin.com/in/chris-tanyx/">View My LinkedIn Profile</a> 
-  <br>
   <a href="https://chris-tanyx.github.io/YingXinTan.github.io/">Back to Home</a> 
+  <br>  
+  <a href="https://www.linkedin.com/in/chris-tanyx/">My LinkedIn Profile</a> 
   <br><br>
   
 theme: jekyll-theme-minimal
