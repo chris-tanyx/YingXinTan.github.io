@@ -8,5 +8,5 @@
 Best FYP Presentation - 2nd Runner Up
 
 <video width="500" height="375" controls loop="" muted="" autoplay="">
- <source src="https://github.com/chris-tanyx/YingXinTan.github.io/raw/refs/heads/master/images/TRC5901_Video.mp4">
+ <source src="https://github.com/chris-tanyx/YingXinTan.github.io/raw/refs/heads/master/images/FYP_kurzgesagtVideo.mp4">
 </video>
