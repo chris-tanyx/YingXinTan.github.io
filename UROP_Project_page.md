@@ -1,6 +1,6 @@
 ## Undergraduate Research Opportunities Program (UROP) | An Extended Look on Subclinical Tremor Differentiation using AI
 
-**On the UROP** Junior engineering students who achieved certain academic prerequisites set by the faculty were eligilbe to apply for research projects with the researchers of the university starting from their 2nd year of studies as an auxilliary activity to gain early first-hand experience on academia-level research. Within the span of 1 year, students planned, conducted and presented their experiments to the academic staff. My project supervisor was Dr. Chan Ping Yi, lecturer at Monash University, experienced in the field of biomechanics.     
+**On the UROP:** Junior engineering students who achieved certain academic prerequisites set by the faculty were eligilbe to apply for research projects with the researchers of the university starting from their 2nd year of studies as an auxilliary activity to gain early first-hand experience on academia-level research. Within the span of 1 year, students planned, conducted and presented their experiments to the academic staff. My project supervisor was Dr. Chan Ping Yi, lecturer at Monash University, experienced in the field of biomechanics.     
 
 **Project description:** Tremors are observed at several body segments at regular and irregular oscillations, often involuntary in nature. A major symptom of common neurological movement disorders such as Essential Tremor (ET) and Parkinson’s Diseases (PD) are tremors, yet they are often still misdiagnosed. In the earlier stages, ET and PD tremors manifest as subclinical tremors, which are of amplitudes too low for clinical assessment. It can be measured using attitude and heading reference systems (AHRS) strapped on to a patient’s arms. The aim of the research is to utilize artificial intelligence (AI) to classify the subclinical tremors into normal, and PD tremors. Consistent accurate classification of low amplitude tremors by the AI architecture may allow for better diagnosis of PD and normal tremors. Subclinical tremors measured at different positions are fed into the network, designed based on a Long-Short Term Memory (LSTM) network. When data collected from a WING position are fed into the network, it yielded the highest accuracy of 78%. The outcome of this study suggests that with further improvements, this method can aid clinicians in differentiating between subclinical tremors. The environment used is MATLAB.
 
@@ -99,8 +99,14 @@ for c = 1 : z
 end
 
 ```
+With that settled, feature extraction from the cleaned positional data was done using STFT and then interpolation again over regions of discontinuity. The effects of a bandpass filter, interpolation and padding were also observed on the extracted features post-STFT as visualised in the spectograms below.  
 
-With that settled, feature extraction from the cleaned positional data was done using STFT and then interpolation again over regions of discontinuity. 
+<p align="center"><img src="images/UROP_img6.png?raw=true"/></p>
+
+The key findings of this exercise are as such: 
+- Without filtering out any frequencies, it would lead to all the amplitudes of movements concentrated at close to frequncies of 0 Hz. This is because the STFT transforms all signals including any noise and unwanted spikes in sensor data. Skipping this step would render the output of feature extraction not usable. 
+-  Input data should be interpolated and padded so that datapoints have a large distinction between points of higher and lower amplitude and are more concentrated at a certain frequency. Thereby making it easier to pinpoint the corresponding frequencies at which maximum amplitudes occur.
+
 
 **Convolutional + LSTM Model Building** </br> 
 Separate the datapoints into set for training and set for testing and organise them into structs. Determine the y label at this point and store in categorical arrays. Next, use the Network Fitting tool from the Network Fitting Toolbox. The parametrers are as such:
