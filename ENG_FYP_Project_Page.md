@@ -2,5 +2,11 @@
 **Student: Tan Ying Xin** <br>
 **Supervisor: Dr. Alpha Agape**
 
-### Project Description
-To develop 
+<p align="center"><img src="images/FYP_Poster.png?raw=true"/></p>
+
+---
+Best FYP Presentation - 2nd Runner Up
+
+<video width="500" height="375" controls loop="" muted="" autoplay="">
+ <source src="https://github.com/chris-tanyx/YingXinTan.github.io/raw/refs/heads/master/images/TRC5901_Video.mp4">
+</video>
