@@ -34,7 +34,38 @@ A large reservoir of data was passed down to me when I started working on it. Th
 
 <p align="center"><img src="images/UROP_img1.png?raw=true"/></p> 
 
-Then comes determining whether the tremor is subclinical or not. The relative hand-arm movements are expressed in joint angles. And using the equation [1], the tremor rating is calculated. A rating value of less than 0.5 is subclinical, conversely would be clinical tremors. After separating the data, the tremor of clinical tremors were selected for this research. 
+Then comes determining whether the tremor is subclinical or not. The relative hand-arm movements are expressed in joint angles. And using the equation below, the tremor rating is calculated. A rating value of less than 0.5 is subclinical, conversely would be clinical tremors. After separating the data, the tremor of clinical tremors were selected for this research. 
+
+```math
+Tremor\,rating = 2.6496 + 0.3071*log\,\theta_{W FE_{RMS}} + 0.0731*log\,\theta_{W AA_{RMS}} + 0.1843*log\,\theta_{E PS_{RMS}} + 0.0988*log\,\theta_{E FE_{RMS}}
+```
+#### 2. Processing Data and Model Training
+**Reading Data** </br>
+The sensor data was already in .xls format for ease of reading in MTALAB. The first part of the code reads the directory and file name of all the available data sets. It filters out incomplete, or faulty data sets or data, then extracts out the time and quaternion data, strong them into data structures. During this process, the code simultaneously stores the file names and location also in said data structure.
+
+**Cartesian Conversion** </br>
+The table with all the measured data is now separated into 2 separate arrays of time data and quaternion data. Then the array with quaternions is transformed into cartesian coordinates using the “rotatepoint” function. These arrays have 3 dimensions, the first two indicates the number of rows and columns respectively. And the last one is the total number of essential and normal patient’s data is currently used. After which, all the amplitude data was normalised to start t = 0 and their amplitudes are calculated. Raw positional data often has missing datapoints, which results in discontinuity in time series data, affecting results of any further data processing. Hence, a cubic interpolation function was applied to estimate missing datapoints.
+
+**Bandpass STFT** </br>
+Front and back zero padding was added to the normalised positional cartesian data, so that the abrupt start and ending point amplitudes are zeroed or excluded from the tremor signals. This helps to avoid sudden peaks in positions that often arise in signals at the start and end of a motion. 
+
+For funsies -- I mean clarity -- a comparison was done between different combinations of data preprocessing to determine the optimum combination. 
+
+With that settled, feature extraction from the cleaned positional data was done using STFT and then interpolate again over regions of discontinuity. 
+
+**Convolutional + LSTM Model Building** </br> 
+Separate the datapoints into set for training and set for testing and organise them into structs. Determine the y label at this point and store in categorical arrays. Next, use the Network Fitting tool from the Network Fitting Toolbox. The parametrers are as such:
+
+```matlab
+inputSize = [3531 1 1]; % determined by the percentage of data selected for training. Optimal number is referenced from previous analysis on subclinical tremors
+filterSize = [1 20]; % suggested values from matLab
+numFilters = 30; % suggested values from matLab
+numHiddenUnits = 50; Optimal number is referenced from previous analysis on subclinical tremors
+numClasses = 2; % suggested values from matLab
+hiddenlayersize = 10 % suggested values from matLab
+```
+**Deep Learning Net Model** </br> 
+Similar to Convplus lstm, but meant for testing. Building a convolutional + LSTM model from scratch is a rather manual process. Whilst it allows room for perfect customisation, it requires many functions to be self-written as well. MATLAB has helpful built-in functions in their Deep Learning Toolbox so that was explored as well. For testing the trained model, the parameters were set as above and along with the built model, it was fed into the Deep Learning Net feature to allow the model to train until a user-defined max. number of epochs or until prediction analysis stabilises to a user-specified minimum threshold, whichever comes first. 
 
 ### Results and Discussions
 
