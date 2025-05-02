@@ -15,7 +15,7 @@
 <p><img src="images/all_accuracies.png?raw=true"/></p>
 
 ---
-[2021 | UROP: Subclinical Tremor Differentiation using AI](/UROP_Project_page.md)
+[2021 | UROP: An Extended Look on Subclinical Tremor Differentiation using AI](/UROP_Project_page.md)
 <p><img src="images/all_accuracies.png?raw=true"/></p>
 
 ---

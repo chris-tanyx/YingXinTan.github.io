@@ -10,7 +10,7 @@
 - Gain experience in using open access tools, such as TensorFlow and PyTorch, in solving computer vision problems.
 - Study the effects of *presence of data pre-processing, optimiser selection, and fully-connected layer design, convolutional and pooling layers built* on classification prediction. 
 
-### Methods
+### Methodology 
 #### 1. Load CIFAR-10 dataset from the KERAS library
 The CIFAR-10 dataset has 60 000 labeled images of 10 classes, already split into 50 000 for training and 10 000 for testing. Each coloured image has a resolution of 32x32 with 3 channels for red, green and blue colours. 
 
