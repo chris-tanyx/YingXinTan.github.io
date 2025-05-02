@@ -46,11 +46,61 @@ The sensor data was already in .xls format for ease of reading in MTALAB. The fi
 The table with all the measured data is now separated into 2 separate arrays of time data and quaternion data. Then the array with quaternions is transformed into cartesian coordinates using the “rotatepoint” function. These arrays have 3 dimensions, the first two indicates the number of rows and columns respectively. And the last one is the total number of essential and normal patient’s data is currently used. After which, all the amplitude data was normalised to start t = 0 and their amplitudes are calculated. Raw positional data often has missing datapoints, which results in discontinuity in time series data, affecting results of any further data processing. Hence, a cubic interpolation function was applied to estimate missing datapoints.
 
 **Bandpass STFT** </br>
+<p align="center"><img src="images/UROP_img2.png?raw=true"/></p>
+<p align="center"><img src="images/UROP_img3.png?raw=true"/></p>
+The 2 figures above are to observe the effects of data pre-processing with (top) and withouth (bottom) bandpass filter. When the signal has been passed through the bandpass filter, the output signal has smaller amplitudes in general and oscillates around x = 0 axis while without the bandpass filter, the data increases from 0 and doesn’t oscillate. The range of the bandpass filter applied here is 3-30Hz, which is a range selected from research that indicates that the frequency range for low amplitude subclinical tremors are typically within <strong>3 to 9Hz for Parkinson’s Disease patients</strong> and <strong>4 to 14 Hz for essential tremor patients</strong> and up to <strong>30Hz for normal patients</strong>. 
+
+Therefore, this comparison proves that bandpass filtering is required to remove any noise and irrelevant datapoints from the processed data. 
+
+```matlab
+% for R2 data padded + bandpass
+for c = 1 : z
+    amp_Rest2_nc(:,1,c) = bandpass(amp_Rest2_padded(:,1,c),[3 30],100);
+    amp_Rest2_nc(:,2,c) = bandpass(amp_Rest2_padded(:,2,c),[3 30],100);
+    amp_Rest2_nc(:,3,c) = bandpass(amp_Rest2_padded(:,3,c),[3 30],100);
+end
+```
+
+**Padding and Interpolation** </br>
 Front and back zero padding was added to the normalised positional cartesian data, so that the abrupt start and ending point amplitudes are zeroed or excluded from the tremor signals. This helps to avoid sudden peaks in positions that often arise in signals at the start and end of a motion. 
 
 For funsies -- I mean clarity -- a comparison was done between different combinations of data preprocessing to determine the optimum combination. 
+<p align="center"><img src="images/UROP_img4.png?raw=true"/></p>
+From the figure above, it demonstrates that by applying only padding (a), or only interpolation (b), these unwanted spikes can be removed in the final output signal, which is (c), as seen by comparing the parts of the signal that are circled in purple. 
 
-With that settled, feature extraction from the cleaned positional data was done using STFT and then interpolate again over regions of discontinuity. 
+<p align="center"><img src="images/UROP_img5.png?raw=true"/></p>
+Now this graph plots the sensor data of another patient's movement. The individual effects of what padding and interpolation does is clearer in this figure than the previous one. After comparing the parts of the signal circled in orange, it shows the effects of interpolation in smoothing the shape of the curve and that of padding is shown in the purple circled section. As seen in (b), some of the unwanted spikes are removed when only interpolation is applied, and a similar case can be observed in Figure 4(a) when only padding is applied. Therefore, it is concluded that both interpolation and padding should be applied to the signal after bandpass filtering (refer plot (c)) to mitigate the effects of errors during data measurement and collection. 
+
+```matlab
+%% Interpolating
+[x,y,z] = size(cart_H_Rest2);
+
+for c = 1 : z
+    tq(:,1,c) = time_Rest2(1,1,c):5:13000; % Change resolution to 1ms
+    amp_Rest2_int(:,1,c) = pchip(time_Rest2(:,1,c),amp_Rest2(:,1,c),tq(:,1,c));
+    tq(:,2,c) = time_Rest2(1,2,c):5:13000;
+    amp_Rest2_int(:,2,c) = pchip(time_Rest2(:,2,c),amp_Rest2(:,2,c),tq(:,2,c));
+    tq(:,3,c) = time_Rest2(1,3,c):5:13000;
+    amp_Rest2_int(:,3,c) = pchip(time_Rest2(:,3,c),amp_Rest2(:,3,c),tq(:,3,c));
+end
+
+%% Padding
+[x,y,z] = size(cart_H_Rest2);
+ 
+amp_Rest2_padded = zeros(x+1,y,z);
+
+for c = 1 : z
+    amp_Rest2_padded(2:x+1,1,c) = amp_Rest2(:,1,c);
+    amp_Rest2_padded(1,1,c) = amp_Rest2(1,1,c);
+    amp_Rest2_padded(2:x+1,2,c) = amp_Rest2(:,2,c);
+    amp_Rest2_padded(1,2,c) = amp_Rest2(1,2,c);
+    amp_Rest2_padded(2:x+1,3,c) = amp_Rest2(:,3,c);
+    amp_Rest2_padded(1,3,c) = amp_Rest2(1,3,c);
+end
+
+```
+
+With that settled, feature extraction from the cleaned positional data was done using STFT and then interpolation again over regions of discontinuity. 
 
 **Convolutional + LSTM Model Building** </br> 
 Separate the datapoints into set for training and set for testing and organise them into structs. Determine the y label at this point and store in categorical arrays. Next, use the Network Fitting tool from the Network Fitting Toolbox. The parametrers are as such:
@@ -66,7 +116,6 @@ hiddenlayersize = 10 % suggested values from matLab
 **Deep Learning Net Model** </br> 
 Similar to Convplus lstm, but meant for testing. Building a convolutional + LSTM model from scratch is a rather manual process. Whilst it allows room for perfect customisation, it requires many functions to be self-written as well. MATLAB has helpful built-in functions in their Deep Learning Toolbox so that was explored as well. For testing the trained model, the parameters were set as above and along with the built model, it was fed into the Deep Learning Net feature to allow the model to train until a user-defined max. number of epochs or until prediction analysis stabilises to a user-specified minimum threshold, whichever comes first. 
 
-### Results and Discussions
 
 ### References
 [1]	Julián D. Loaiza Duque, Andrés M. González-Vargas, Antonio J. Sánchez Egea & Hermán A. González Rojas, "Using Machine Learning and Accelerometry Data for Differential Diagnosis of Parkinson’s Disease and Essential Tremor," presented at the Workshop on Engineering Applications, Santa Marta, Columbia, 2019. [Online]. Available: https://link.springer.com/chapter/10.1007/978-3-030-31019-6_32.
