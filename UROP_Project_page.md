@@ -1,8 +1,9 @@
 ## Undergraduate Research Opportunities Program (UROP) | An Extended Look on Subclinical Tremor Differentiation using AI
 
-**On the (UROP)**
+**On the UROP**
+Junior engineering students who achieved certain academic prerequisites set by the faculty were eligilbe to apply for research projects with the researchers of the university starting from their 2nd year of studies as an auxilliary activity to gain early first-hand experience on academia-level research. Within the span of 1 year, students planned, conducted and presented their experiments to the academic staff. My project supervisor was Dr. Chan Ping Yi, lecturer at Monash University, experienced in the field of biomechanics.     
 
-**Project description:** Tremor is observed at several body segments at regular and irregular oscillations, often involuntary in nature. A major symptom of common neurological movement disorders such as Essential Tremor (ET) and Parkinson’s Diseases (PD) are tremors, yet they are often still misdiagnosed. In the earlier stages, ET and PD tremors manifest as subclinical tremors, which are of amplitudes too low for clinical assessment. It can be measured using attitude and heading reference systems (AHRS) strapped on to a patient’s arms. The aim of the research is to utilize artificial intelligence (AI) to classify the subclinical tremors into normal, and PD tremors. Consistent accurate classification of low amplitude tremors by the AI architecture may allow for better diagnosis of PD and normal tremors. Subclinical tremors measured at different positions are fed into the network, designed based on a Long-Short Term Memory (LSTM) network. When data collected from a WING position are fed into the network, it yielded the highest accuracy of 78%. The outcome of this study suggests that with further improvements, this method can aid clinicians in differentiating between subclinical tremors. The environment used is MATLAB.
+**Project description:** Tremors are observed at several body segments at regular and irregular oscillations, often involuntary in nature. A major symptom of common neurological movement disorders such as Essential Tremor (ET) and Parkinson’s Diseases (PD) are tremors, yet they are often still misdiagnosed. In the earlier stages, ET and PD tremors manifest as subclinical tremors, which are of amplitudes too low for clinical assessment. It can be measured using attitude and heading reference systems (AHRS) strapped on to a patient’s arms. The aim of the research is to utilize artificial intelligence (AI) to classify the subclinical tremors into normal, and PD tremors. Consistent accurate classification of low amplitude tremors by the AI architecture may allow for better diagnosis of PD and normal tremors. Subclinical tremors measured at different positions are fed into the network, designed based on a Long-Short Term Memory (LSTM) network. When data collected from a WING position are fed into the network, it yielded the highest accuracy of 78%. The outcome of this study suggests that with further improvements, this method can aid clinicians in differentiating between subclinical tremors. The environment used is MATLAB.
 
 **KEYWORDS:** Parkinson’s Disease, Essential Tremor, Subclincal tremor, Artificial Intelligence, LSTM networks, MATLAB. 
  
@@ -25,9 +26,16 @@ This research project aims to use a new combination of artificial intelligence m
 
 ### Methodology
 #### 1. Literature Review
-At least a month was dedicated to obtain background information on this project previously led by then PhD candidate, Gerard Ruchin Randil Nanayakkara. His paper Subclinical tremor differentiation using LSTM networks, co-written with Dr. Chan Ping Yi, largely informed the project pipeline for this research [3]. Hence part of the project scope was to expand the field of references beyond those already included in Gerard's paper. 
+At least a month was dedicated to obtain background information on this project previously led by then PhD candidate, Gerard Ruchin Randil Nanayakkara. His paper Subclinical tremor differentiation using LSTM networks, co-written with Dr. Chan Ping Yi, largely informed the project pipeline for this research [3]. Hence part of the project scope was to expand the field of references beyond those already included in Gerard's study. 
 
-https://pubmed.ncbi.nlm.nih.gov/39992543/
+From the literature review, it was decided to proceed with the method of feature extraction of short-time Fourier transform (STFT). As for the classifiers, both artificial neural networks (ANN) and LSTM networks were compared for accuracy but ultimately LSTM was selected due to better performance. 
+
+A large reservoir of data was passed down to me when I started working on it. These are tremor data amassed from patients already clinically diagnosed classified with either essential tremors, Parkinson’s or normal. It was measured using 3 MEMS AHRS attached along 3 parts of a patient’s arm – back of hand, distal lower end, Upper lower end. The sensors inside these devises outputs the acceleration, angle, change in magnetic field and the 3d orientation data; only the orientation data, stored as quaternion was used in this research. 
+
+<p align="center"><img src="images/UROP_img1.png?raw=true"/></p> 
+
+Then comes determining whether the tremor is subclinical or not. The relative hand-arm movements are expressed in joint angles. And using the equation [1], the tremor rating is calculated. A rating value of less than 0.5 is subclinical, conversely would be clinical tremors. After separating the data, the tremor of clinical tremors were selected for this research. 
+
 ### Results and Discussions
 
 ### References
@@ -35,6 +43,5 @@ https://pubmed.ncbi.nlm.nih.gov/39992543/
 
 [2] Sanghee Moon, Hyun-Je Song, Vibhash D. Sharma, Kelly E. Lyons, Rajesh Pahwa, Abiodun E. Akinwuntan & Hannes Devos, "Classification of Parkinson’s disease and essential tremor based on balance and gait characteristics from wearable motion sensors via machine learning techniques: a data-driven approach", Journal of Neuroengineering and Rehabilitation, 2020. [Online] Available: https://link.springer.com/article/10.1186/s12984-020-00756-5
 
-[3] Gerard Ruchin Randil Nanayakkara, Ping Yi Chan, "Classification of Parkinson’s disease and essential tremor based on balance and gait characteristics from wearable motion sensors via machine learning techniques: a data-driven approach", Journal of Neuroengineering and Rehabilitation, 2020. [Online] Available: https://link.springer.com/article/10.1186/s12984-020-00756-5
-
+[3] Gerard Ruchin Randil Nanayakkara, Ping Yi Chan, "Subclinical tremor differentiation using LSTM networks", Phys Eng Sci Med, 2025 Feb 24. [Online] Available: https://pubmed.ncbi.nlm.nih.gov/39992543/
 

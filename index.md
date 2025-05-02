@@ -12,15 +12,15 @@
 
 ---
 [2022 | How Deep is too Deep?](/TRC5901_Project_page.md)
-<p><img src="images/all_accuracies.png?raw=true"/></p>
+<p align="center"><img src="images/all_accuracies.png?raw=true"/></p>
 
 ---
 [2021 | UROP: An Extended Look on Subclinical Tremor Differentiation using AI](/UROP_Project_page.md)
-<p><img src="images/all_accuracies.png?raw=true"/></p>
+<p align="center"><img src="images/UROP_img1.png?raw=true"/></p>
 
 ---
 [2020 | Corona Air](https://github.com/YingXinTan/20-S1-T174-CoronaAir)<br>
-<p><img src="images/Booking Page.jpg?raw=true"/></p>
+<p align="center"><img src="images/Booking Page.jpg?raw=true"/></p>
 
 ---
 <p align="center">More to come! Watch this space.</p>
