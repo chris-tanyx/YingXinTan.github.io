@@ -1,7 +1,6 @@
 ## Undergraduate Research Opportunities Program (UROP) | An Extended Look on Subclinical Tremor Differentiation using AI
 
-**On the UROP**
-Junior engineering students who achieved certain academic prerequisites set by the faculty were eligilbe to apply for research projects with the researchers of the university starting from their 2nd year of studies as an auxilliary activity to gain early first-hand experience on academia-level research. Within the span of 1 year, students planned, conducted and presented their experiments to the academic staff. My project supervisor was Dr. Chan Ping Yi, lecturer at Monash University, experienced in the field of biomechanics.     
+**On the UROP** Junior engineering students who achieved certain academic prerequisites set by the faculty were eligilbe to apply for research projects with the researchers of the university starting from their 2nd year of studies as an auxilliary activity to gain early first-hand experience on academia-level research. Within the span of 1 year, students planned, conducted and presented their experiments to the academic staff. My project supervisor was Dr. Chan Ping Yi, lecturer at Monash University, experienced in the field of biomechanics.     
 
 **Project description:** Tremors are observed at several body segments at regular and irregular oscillations, often involuntary in nature. A major symptom of common neurological movement disorders such as Essential Tremor (ET) and Parkinson’s Diseases (PD) are tremors, yet they are often still misdiagnosed. In the earlier stages, ET and PD tremors manifest as subclinical tremors, which are of amplitudes too low for clinical assessment. It can be measured using attitude and heading reference systems (AHRS) strapped on to a patient’s arms. The aim of the research is to utilize artificial intelligence (AI) to classify the subclinical tremors into normal, and PD tremors. Consistent accurate classification of low amplitude tremors by the AI architecture may allow for better diagnosis of PD and normal tremors. Subclinical tremors measured at different positions are fed into the network, designed based on a Long-Short Term Memory (LSTM) network. When data collected from a WING position are fed into the network, it yielded the highest accuracy of 78%. The outcome of this study suggests that with further improvements, this method can aid clinicians in differentiating between subclinical tremors. The environment used is MATLAB.
 
@@ -34,7 +33,7 @@ A large reservoir of data was passed down to me when I started working on it. Th
 
 <p align="center"><img src="images/UROP_img1.png?raw=true"/></p> 
 
-Then comes determining whether the tremor is subclinical or not. The relative hand-arm movements are expressed in joint angles. And using the equation below, the tremor rating is calculated. A rating value of less than 0.5 is subclinical, conversely would be clinical tremors. After separating the data, the tremor of clinical tremors were selected for this research. 
+Then comes determining whether the tremor is subclinical or not. The relative hand-arm movements are expressed in joint angles. And using the equation below, the tremor rating is calculated. A rating value of less than 0.5 is subclinical, conversely would be clinical tremors. After separating the data, the tremor of clinical tremors were selected for this research.<br>
 
 ```math
 Tremor\,rating = 2.6496 + 0.3071*log\,\theta_{W FE_{RMS}} + 0.0731*log\,\theta_{W AA_{RMS}} + 0.1843*log\,\theta_{E PS_{RMS}} + 0.0988*log\,\theta_{E FE_{RMS}}
