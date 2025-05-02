@@ -16,7 +16,7 @@
 
 ---
 [2021 | UROP: An Extended Look on Subclinical Tremor Differentiation using AI](/UROP_Project_page.md)
-<p align="center"><img height="560" src="images/UROP_img1.png?raw=true"/></p>
+<p align="center"><img src="images/UROP_img1.png?raw=true" height="320"/></p>
 
 ---
 [2020 | Corona Air](https://github.com/YingXinTan/20-S1-T174-CoronaAir)<br>
