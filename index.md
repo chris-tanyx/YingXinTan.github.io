@@ -3,7 +3,7 @@
 ---
 
 ### Coursework
-[2023 | Final Year Project: Learning from Demonstration (LfD) for a Robotic Arm]
+[2023 | Final Year Project: Learning from Demonstration (LfD) for a Robotic Arm](/FYP_Project_page.md)
 <video width="500" height="375" controls loop="" muted="" autoplay="">
  <source src="https://github.com/chris-tanyx/YingXinTan.github.io/raw/refs/heads/master/images/FYP_kurzgesagtVideo.mp4">
 </video>
