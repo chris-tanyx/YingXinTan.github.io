@@ -4,7 +4,9 @@
 
 ### Coursework
 [2023 | Final Year Project: Learning from Demonstration (LfD) for a Robotic Arm]
-<p align="center"><img src="images/FYP_kurzgesagt.gif?raw=true" width="250"/></p>
+<video width="500" height="375" controls loop="" muted="" autoplay="">
+ <source src="https://github.com/chris-tanyx/YingXinTan.github.io/raw/refs/heads/master/images/FYP_kurzgesagtVideo.mp4">
+</video>
 
 ---
 [2022 | Extended Kalman Filter, Computer Vision & Path Planning](https://github.com/YingXinTan/ECE4078-G4-FINALISED)
