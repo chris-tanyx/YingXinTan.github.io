@@ -5,8 +5,9 @@
 <p align="center"><img src="images/FYP_Poster.png?raw=true"/></p>
 
 ---
-Best FYP Presentation - 2nd Runner Up
+### Best FYP Presentation - 2nd Runner Up
 
-<video width="500" height="375" controls loop="" muted="" autoplay="">
- <source src="https://www.youtube.com/watch?v=zFE4TrZEwCg">
-</video>
+Watch on YouTube!
+
+[Why I buried myself in the Motion Capture Lab for 12 months: My Final Year Project](https://www.youtube.com/watch?v=zFE4TrZEwCg)
+[<img src="images/FYP_Video_YTThumbnail.png?raw=true"/>](https://www.youtube.com/watch?v=zFE4TrZEwCg)
